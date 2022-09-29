@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Password Generater</title>
+</head>
+<body>
+    
+    <section class="main">
+        <div class="container">
+            <div class="data">
+                <input class="display" id="display" type="text" value="" readonly>
+                <input class="len" id="len" type="range" step="1" value="4" max="40" min="4" oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <div class="box">
+                <label class="text" for="upper">
+                    Uppercase letters
+                </label>
+                <input type="checkbox" checked id="upper">
+            </div>
+            <div class="box">
+                <label class="text" for="lower">
+                    Lowercase letters
+                </label>
+                <input type="checkbox" checked id="lower">
+            </div>
+            <div class="box">
+                <label class="text" for="sym">
+                    Symbols
+                </label>
+                <input type="checkbox" checked id="sym">
+            </div>
+            <div class="box">
+                <label class="text" for="num">
+                    Number letters
+                </label>
+                <input type="checkbox" checked id="num">
+            </div>  
+            <button onclick="show()" class="btn" id="gen">Generate</button>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
