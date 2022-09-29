@@ -26,45 +26,48 @@ function getNum(){
 
 let password = [];
 
-function generatePassword(){
-    for (let i = 0; i<len.value; i++){
-        switch (Math.floor(Math.random() * 4)) {
-            case 0:
-                if(upper.checked){
-                    password.push(getUpper());
-                }
-                else{
-                    i--
+function generatePassword() {
+    // before running the loop check that we have a checked box from user - bug fix by Taha Siddiqi - date:29-09-2022
+    if (upper.checked == true || lower.checked == true || sym.checked == true || num.checked == true) {
+        for (let i = 0; i < len.value; i++) {
+            switch (Math.floor(Math.random() * 4)) {
+                case 0:
+                    if (upper.checked) {
+                        password.push(getUpper());
+                    }
+                    else {
+                        i--
+                        break;
+                    }
                     break;
-                }
-                break;
-            case 1:
-                if(lower.checked){
-                    password.push(getLower());
-                }
-                else{
-                    i--
+                case 1:
+                    if (lower.checked) {
+                        password.push(getLower());
+                    }
+                    else {
+                        i--
+                        break;
+                    }
                     break;
-                }
-                break;
-            case 2:
-                if(num.checked){
-                    password.push(getNum());
-                }
-                else{
-                    i--
+                case 2:
+                    if (num.checked) {
+                        password.push(getNum());
+                    }
+                    else {
+                        i--
+                        break;
+                    }
                     break;
-                }
-                break;
-            case 3:
-                if(sym.checked){
-                    password.push(getSym());
-                }
-                else{
-                    i--
+                case 3:
+                    if (sym.checked) {
+                        password.push(getSym());
+                    }
+                    else {
+                        i--
+                        break;
+                    }
                     break;
-                }
-                break;
+            }
         }
     }
 }
