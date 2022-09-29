@@ -70,6 +70,9 @@ function generatePassword() {
             }
         }
     }
+    else{
+        alert('Please Select atleast one check box')
+    }
 }
 
 function show(){
